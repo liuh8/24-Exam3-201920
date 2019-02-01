@@ -139,12 +139,29 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
-    a = 0
-    while True:
-        a = a + 1
-        if fibonacci(a) <= n <= fibonacci(a + 1):
-            break
-    return fibonacci(a)
+    # a = 0
+    # while True:
+    #     a = a + 1
+    #     if fibonacci(a) <= n <= fibonacci(a + 1):
+    #         break
+    # return fibonacci(a)
+
+    if n == 0:
+        a = 0
+        return a
+    elif n == 1:
+        a = 1
+        return a
+    else:
+        a = 1
+        b = 2
+        while True:
+            # print(a, b)
+            if a <= n <= a + b:
+                return a
+            a = a + b
+            b = a + b
+
 
 
 ###############################################################################

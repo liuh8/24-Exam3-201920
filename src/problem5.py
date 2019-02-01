@@ -151,12 +151,12 @@ def problem5(seq_of_seq):
 
     largest = []
     for k in range(len(seq_of_seq)):
-        if len(seq_of_seq[k]) == 0:
+        if len(seq_of_seq[k]) > 0:
             a = 0
             for i in range(len(seq_of_seq[k])):
                 if seq_of_seq[k][i] > a:
                     a = seq_of_seq[k][i]
-                largest = largest + [a]
+            largest = largest + [a]
     return largest
 
 
